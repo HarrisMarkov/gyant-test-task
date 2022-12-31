@@ -16,9 +16,9 @@ export class EhrService {
 
     // Read all EHRs into MongoDB
     for(let i = 0; i < FILE_NAMES.length; i++){
-      fs.readFile(`./cases/${FILE_NAMES[i]}`, (err, data) => {
+      fs.readFile(`./case-and-conditions-files/${FILE_NAMES[i]}`, (err, data) => {
         if (err) throw err;
-        const ehrCase = new this.ehrModel({description: data}).save();
+        new this.ehrModel({description: data}).save();
       });
     }
 
