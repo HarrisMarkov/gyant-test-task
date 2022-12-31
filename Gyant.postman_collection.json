@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "437d9c5b-e32a-45e6-92c1-626c3eb8c4e9",
+		"name": "Gyant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17530155"
+	},
+	"item": [
+		{
+			"name": "EHRs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/ehr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ehr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EHRs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/ehr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ehr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EHR Case by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/ehr/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ehr",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "63addaa4b4a0d0d7cc7856ac"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Label an EHR",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/ehr/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ehr",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "63addaa4b4a0d0d7cc7856ac"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conditions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/ehr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ehr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conditions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/ehr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ehr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Condition by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/ehr/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ehr",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "63addaa4b4a0d0d7cc7856ac"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
