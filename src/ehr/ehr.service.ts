@@ -14,8 +14,6 @@ export class EhrService {
   constructor(@InjectModel(Ehr.name) private ehrModel: Model<EhrDocument>) {}
 
   async create(createEhrDto: CreateEhrDto) {
-    let records;
-
     // Read all EHRs into MongoDB
     for(let i = 0; i < FILE_NAMES.length; i++){
       try{
@@ -43,7 +41,7 @@ export class EhrService {
     let records;
 
     try{
-      records = this.ehrModel.find();
+      records = await this.ehrModel.find();
     } catch(e){
       console.error(E_DB_FIND + e.message)
     }
@@ -55,7 +53,7 @@ export class EhrService {
     let records;
 
     try{
-      records = this.ehrModel.findOne({_id: id});
+      records = await this.ehrModel.findOne({_id: id});
     } catch(e){
       console.error(E_DB_FIND + e.message)
     }
@@ -67,7 +65,7 @@ export class EhrService {
     let records;
 
     try{
-      records = this.ehrModel.updateOne({
+      records = await this.ehrModel.updateOne({
         _id: id,
       },
       {
@@ -79,14 +77,14 @@ export class EhrService {
       console.error(E_DB_UPDATE + e.message)
     }
     
-    return records;
+    return await this.findOne(id);
   }
 
   async remove(id: number) {
     let records;
 
     try{
-      records = this.ehrModel.deleteOne({_id: id});
+      records = await this.ehrModel.deleteOne({_id: id});
     }catch(e){
       console.error(E_DB_REMOVE + e.message)
     }

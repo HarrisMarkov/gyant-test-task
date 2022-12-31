@@ -46,7 +46,7 @@ export class ConditionService {
     let records;
 
     try{
-      records = this.conditionModel.find();
+      records = await this.conditionModel.find();
     } catch(e){
       console.error(E_DB_FIND + e.message)
     }
@@ -58,7 +58,7 @@ export class ConditionService {
     let records;
 
     try{
-      records = this.conditionModel.findOne({_id: id});
+      records = await this.conditionModel.findOne({_id: id});
     } catch(e){
       console.error(E_DB_FIND + e.message)
     }
@@ -70,7 +70,7 @@ export class ConditionService {
     let records;
 
     try{
-      records = this.conditionModel.updateOne({
+      records = await this.conditionModel.updateOne({
         _id: id,
       },
       {
@@ -89,7 +89,7 @@ export class ConditionService {
     let records;
 
     try{
-      records = this.conditionModel.deleteOne({_id: id});
+      records = await this.conditionModel.deleteOne({_id: id});
     }catch(e){
       console.error(E_DB_REMOVE + e.message)
     }
