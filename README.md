@@ -70,7 +70,7 @@ Inserts all the EHR files into the database.
 This endpoint doesn't take in any parameters in the request body.
 
 #### Success response
-```json
+```bash
 Successfully saved the medical cases: 3
 ```
 
@@ -162,8 +162,8 @@ This endpoint is used to label an EHR. It will add the filed `label` with whatev
 #### Error response
 ```json
 {
-  name: "E_DB_FIND",
-  message: "Error occurred while updating data in MongoDB:"  (plus error thrown by MongoDB),
+  "name": "E_DB_FIND",
+  "message": "Error occurred while updating data in MongoDB:"  (plus error thrown by MongoDB),
 }
 ```
 
@@ -176,7 +176,7 @@ Parses the conditions' csv file and loads the data into MongoDB.
 This endpoint doesn't take in any parameters in the request body.
 
 #### Success Response
-```json
+```bash
 Successfully saved the conditions: 123
 ```
 
